@@ -21,35 +21,14 @@
 
 			<div class="contact-form">
 				<h2>{_ title_email}</h2>
-				<!-- Modal -->
+
 				{foreach $flashes as $flash}
-					{if $flash->type === 'success'}
-						<div class="modal fade" id="registeredModal" tabindex="-1" role="dialog" aria-labelledby="registeredModalTitle" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h4 class="modal-title" id="registeredModalLongTitle">{_ email_send}</h4>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-									</div>
-									<div class="modal-body">
-										{$flash->message}
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-dismiss="modal">{_ close}</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					{else}
-						<div class="alert alert-{$flash->type} alert-dismissible fade show" style="max-width: 600px" role="alert">
-							{$flash->message}
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-					{/if}
+					<div class="alert alert-{$flash->type} alert-dismissible fade show" style="max-width: 500px" role="alert">
+						{$flash->message}
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
 				{/foreach}
 
 				<div class="contactForm">
@@ -94,4 +73,9 @@
 			</div>
 		</div>
 	</section>
+{/block}
+
+{block #scripts}
+	<script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+	<script src="{$basePath}/scripts/invisibleRecaptcha.js"></script>
 {/block}
