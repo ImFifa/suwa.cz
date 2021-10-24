@@ -1,0 +1,31 @@
+# heading
+subheading: We offer wide range of services from business consulting and digital marketing all the way to organizing events
+
+# menu
+link_home: Home
+link_services: Services
+link_contact: Contact
+
+#services page
+title_services: Our services
+no_services: There is no service to show at the moment
+no_service: "The service you are looking for wasn't found in English. It might exist in different language version."
+show_service: Show detail
+gallery: Gallery
+
+#contact page
+title_contact: Contact
+languages: "English, Arabic, French and Czech"
+title_email: Send me an email!
+email_send: Send email
+send: Send
+close: Close
+
+#about page
+title_about: About us
+
+# footer
+author: Websites designed to fit your needs
+
+# error
+error: "We are sorry, but the page you were looking for no longer exists."
