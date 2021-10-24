@@ -45,14 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		console.log("modal is shown");
 	}
 
-	//gdpr
-	$(".gdpr button").click(function() {
-		var date = new Date();
-		date.setFullYear(date.getFullYear() + 10);
-		document.cookie = "gdpr=1; path=/; expires=" + date.toGMTString();
-		$(".gdpr").hide();
-	});
-
 	// on scroll events
 	// eslint-disable-next-line no-undef
 	runOnScroll();

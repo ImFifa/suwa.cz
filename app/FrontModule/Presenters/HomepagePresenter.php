@@ -29,7 +29,6 @@ class HomepagePresenter extends BasePresenter
 	public function renderDefault(): void
 	{
 		$this->template->services = $this->serviceModel->getPublicServices($this->lang);
-		bdump($this->template->services);
 	}
 
 	public function renderContact(): void
