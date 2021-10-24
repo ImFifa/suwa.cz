@@ -11,6 +11,9 @@ use stdClass;
 abstract class BasePresenter extends FrontBasePresenter
 {
 
+	/** @persistent */
+	public $locale;
+
 	/** @inject */
 	public BoxComponentFactory $boxFactory;
 
