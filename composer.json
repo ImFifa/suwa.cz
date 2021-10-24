@@ -34,6 +34,7 @@
 		"ext-xmlwriter": "*",
 		"contributte/recaptcha": "^v3.3.1",
 		"nette/nette": "3.0.0",
+		"nextras/mail-panel": "^2.5",
 		"orisai/nette-di": "^1.0.0",
 		"simple-cms/analytics-module": "dev-master",
 		"simple-cms/box-module": "dev-master",

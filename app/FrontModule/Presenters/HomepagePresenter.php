@@ -54,6 +54,9 @@ class HomepagePresenter extends BasePresenter
 		$form->addTextArea('message', 'Text zprávy')
 			->addRule($form::MAX_LENGTH, 'Zpráva je příliš dlouhá', 10000);
 
+		$form->addInvisibleReCaptcha('recaptcha')
+			->setMessage('Jste opravdu člověk?');
+
 		$form->addSubmit('submit', 'Odeslat');
 
 		$form->onSubmit[] = function (Form $form) {
