@@ -1,0 +1,31 @@
+# heading
+subheading: Poskytujeme širokou nabídku služeb od podnikatelského poradenství před digitální marketing až po pořádání eventů
+
+# menu
+link_home: Úvod
+link_services: Služby
+link_contact: Konktakt
+
+#services page
+title_services: Naše služby
+no_services: Aktuálně není v nabídce žádná služba
+no_service: "Hledanou službu se nepodařilo nalézt. Je možné, že se na webu nachází v jiné jazykové verzi."
+show_service: Zobrazit detail
+gallery: Galerie
+
+#contact page
+title_contact: Kontakt
+languages: "Komunikuji v angličtině, arabštině, francouzštině a češtině"
+title_email: Napiště mi zprávu!
+email_send: Odeslat email
+send: Odeslat
+close: Zavřít
+
+#about page
+title_about: O nás
+
+# footer
+author: Webové stránky na míru
+
+# error
+error: "Je nám líto, ale hledanou stránku se nepodařilo vyhledat"
