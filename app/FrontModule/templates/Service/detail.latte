@@ -1,0 +1,36 @@
+{block #content}
+	<section class="container service-detail">
+		{ifset $service}
+			<div class="service-grid">
+				<div class="service-content">
+					<h1>{$service->name}</h1>
+					<div class="service-description">
+						{$service->description|noescape}
+					</div>
+				</div>
+				{ifset $service->cover}
+					<img class="cover-img" src="{$basePath}/upload/services/{$service->id}/{$service->cover}" alt="{$service->name}">
+				{else}
+					<img class="cover-img" src="{$basePath}/dist/img/consulting.jpg" alt="{$service->name}">
+				{/ifset}
+			</div>
+			<div n:ifset="$images" class="service-gallery">
+				<h3>{_ gallery}</h3>
+				<div class="gallery-grid">
+					{foreach $images as $image}
+						<a href="{$basePath}/upload/galleries/{$service->gallery_id}/{$image->name}" class="gal-img" data-lightbox="gallery" data-name="{$image->name}">
+							<img src="{$basePath}/upload/galleries/{$service->gallery_id}/thumbs/{$image->name}" class="lazyload" alt="{$image->title}">
+						</a>
+					{/foreach}
+				</div>
+			</div>
+			<div class="cta">
+				<h4>Zaujala Vás naše nabídka?</h4>
+				<p>Neváhejte a ozvěte se nám!</p>
+				<a n:href="Homepage:contact" class="btn btn-primary mt-1">Kontaktujte nás!</a>
+			</div>
+			{else}
+			<h4>{_ no_service}</h4>
+		{/ifset}
+	</section>
+{/block}

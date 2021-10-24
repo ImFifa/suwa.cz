@@ -1,3 +1,33 @@
 {block #content}
+	<section class="container heading">
+		<h1>Suwa</h1>
+		<h4>{_ subheading}</h4>
+	</section>
+	<section class="container service-section">
+		<h2>{_ title_services}</h2>
+		{if $services}
+			<div class="service-grid">
+				{foreach $services as $service}
+					<div class="service">
+						<a n:href="Service:detail $service->slug">
+							<h4>{$service->name}</h4>
+							<span>{_ show_service}</span>
+							{ifset $service->cover}
+								<img src="{$basePath}/upload/services/{$service->id}/{$service->cover}" alt="{$service->name}">
+							{else}
+								<img src="{$basePath}/dist/img/consulting.jpg" alt="{$service->name}">
+							{/ifset}
+						</a>
+					</div>
+				{/foreach}
+			</div>
+			{else}
+				<h4>{_ no_services}</h4>
+			{/if}
+	</section>
 
+	<section class="container about-section">
+		<h2>{_ title_about}</h2>
+		{box about}
+	</section>
 {/block}
