@@ -501,24 +501,24 @@ section {
 }
 
 // gdpr
-.gdpr {
-	width: calc(100% - 2rem);
-	max-width: 450px;
-	position: fixed;
-	right: 1rem;
-	bottom: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	padding: 1.5rem;
-	color: $gray-700;
-	background-color: rgba($white,0.95);
-	z-index: 1000;
-	border-radius: $border-radius/2;
-
-	i {
-		color: $brown;
-		font-size: 1.5rem;
-	}
-}
+//.gdpr {
+//	width: calc(100% - 2rem);
+//	max-width: 450px;
+//	position: fixed;
+//	right: 1rem;
+//	bottom: 1rem;
+//	display: flex;
+//	flex-direction: column;
+//	justify-content: flex-start;
+//	align-items: flex-start;
+//	padding: 1.5rem;
+//	color: $gray-700;
+//	background-color: rgba($white,0.95);
+//	z-index: 1000;
+//	border-radius: $border-radius/2;
+//
+//	i {
+//		color: $brown;
+//		font-size: 1.5rem;
+//	}
+//}
