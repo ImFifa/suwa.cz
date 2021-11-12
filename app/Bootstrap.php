@@ -37,7 +37,6 @@ class Bootstrap
 		$configurator->addConfig(__DIR__ . '/../vendor/simple-cms/core-module/config/config.neon');
 		$configurator->addConfig(__DIR__ . '/../vendor/simple-cms/box-module/config/config.neon');
 		$configurator->addConfig(__DIR__ . '/../vendor/simple-cms/gallery-module/config/config.neon');
-		$configurator->addConfig(__DIR__ . '/../vendor/simple-cms/file-module/config/config.neon');
 		$configurator->addConfig(__DIR__ . '/../vendor/simple-cms/analytics-module/config/config.neon');
 
 		$configurator->addConfig(__DIR__ . '/config/config.neon');
