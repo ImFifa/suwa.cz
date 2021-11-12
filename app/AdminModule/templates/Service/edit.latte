@@ -2,18 +2,18 @@
 {varType Nette\Database\Table\ActiveRow|null $service}
 
 {block #title}
-	{$service === null ? 'Přidání' : 'Úprava'} služby
+	{$service === null ? 'Add new' : 'Edit'} service
 {/block}
 
 {block #buttons}
 	<a href="#" class="btn btn-primary" onclick="triggerClick('.btn-save')">
-		Uložit
+		Save
 	</a>
 	<a n:if="$service" n:href=":Front:Service:detail $service->slug" class="btn btn-info" target="_blank">
-		Zobrazit na webu
+		Show preview on website
 	</a>
 	<a n:href="default" class="btn btn-light">
-		Zpět
+		Back
 	</a>
 {/block}
 
@@ -25,8 +25,8 @@
 					{control cropper}
 				</div>
 				<div class="modal-footer d-flex justify-content-between">
-					<button type="button" class="btn btn-light" data-dismiss="modal">Zavřít</button>
-					<button type="button" class="btn btn-success" onclick="triggerClick('.btn-cropper-submit')">Oříznout</button>
+					<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success" onclick="triggerClick('.btn-cropper-submit')">Crop image</button>
 				</div>
 			</div>
 		</div>
@@ -53,7 +53,7 @@
 							<div class="col-lg-6">
 								<div class="form-group">
 									{label gallery_id}{/label}
-                                    <small class="text-muted float-right">(nepovinné)</small>
+                                    <small class="text-muted float-right">(optional)</small>
                                     {input gallery_id class => 'form-control form-control-sm'}
 								</div>
 							</div>
@@ -67,7 +67,7 @@
 								<div class="form-group">
 									<div class="custom-control custom-checkbox">
 										<input n:name="public" class="custom-control-input">
-										<label n:name="public" class="custom-control-label">Zveřejnit</label>
+										<label n:name="public" class="custom-control-label">Make public</label>
 									</div>
 								</div>
 							</div>
@@ -78,7 +78,7 @@
 			</div>
 			<div class="col-lg-4" n:if="$service" n:snippet="image">
 				<div class="mb-2">
-					Náhledový obrázek
+					Cover image
 				</div>
 				{control dropzone}
                 {if $service->cover}
@@ -93,7 +93,7 @@
 									<i class="mdi mdi-rotate-right"></i>
 								</a>
 								<a n:href="cropImage!" class="ajax btn btn-primary btn-sm">
-									Oříznout
+									Crop
 								</a>
 								<a n:href="deleteImage!"
 										data-confirm="modal"
@@ -101,7 +101,7 @@
 										data-confirm-text="Opravdu chcete smazat tento obrázek?"
 										data-ajax="off"
 										class="btn btn-sm btn-danger">
-									Smazat
+									Delete
 								</a>
 							</div>
 						</div>
@@ -112,7 +112,7 @@
 							<i class="mdi mdi-information"></i>
 						</div>
 						<div class="message">
-							Náhledový obrázek není nahrán
+							Cover image was not uploaded
 						</div>
 					</div>
 				{/if}

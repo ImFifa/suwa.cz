@@ -19,7 +19,19 @@ parameters:
 	customTemplatesDir: %appDir%/FrontModule/templates/
 	admin:
 		menu:
-			Služby: [':Admin:Service:', offer]
+			Services: [':Admin:Service:', offer]
+	dictionary:
+		admin.core: 'General rights'
+		admin.core.dashboard: 'Dashboard'
+		admin.core.user: 'Users'
+		admin.core.user.edit: 'Edit'
+		admin.core.user.activate: 'Activate / Deactivate'
+		admin.core.user.delete: 'Delete'
+		admin.core.role: 'Roles'
+		admin.core.log: 'Messages'
+		admin.core.configuration: 'Configuration'
+		admin.core.live: 'Live content update'
+		admin.dev: 'Development functions'
 
 extensions:
     recaptcha: Contributte\ReCaptcha\DI\ReCaptchaExtension
