@@ -12,7 +12,7 @@
 		{if $record->gallery}
 			<a href="{plink :Admin:Gallery:edit $record->gallery->id}">{$record->gallery->name}</a>
 		{else}
-			<i>Žádná</i>
+			<i>None</i>
 		{/if}
 	</td>
 {/define}
@@ -20,9 +20,9 @@
 {define body-cell-public}
 	<td>
 		{if $record->public}
-			<span class="text-success"><i class="mdi mdi-earth"></i> Veřejná</span>
+			<span class="text-success"><i class="mdi mdi-earth"></i> Public</span>
 		{else}
-			<span class="text-danger"><i class="mdi mdi-lock"></i> Neveřejná</span>
+			<span class="text-danger"><i class="mdi mdi-lock"></i> Private</span>
 		{/if}
 	</td>
 {/define}

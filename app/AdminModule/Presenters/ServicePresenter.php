@@ -62,26 +62,26 @@ class ServicePresenter extends BasePresenter
 	{
 		$form = new Form();
 
-		$form->addText('name', 'Název:')
-			->addRule(Form::MAX_LENGTH, 'Maximálné délka je %s znaků', 50)
-			->setRequired('Název služby je povinný');
+		$form->addText('name', 'Service name:')
+			->addRule(Form::MAX_LENGTH, 'Maximal lenght is %s characters', 50)
+			->setRequired('Service name is mandatory');
 
 		if ($this->configuration->getLanguagesCount() > 1) {
-			$form->addSelect('lang', 'Jazyk:')
+			$form->addSelect('lang', 'Language:')
 				->setItems($this->configuration->languages, false);
 		}
 
-		$form->addCheckbox('public', 'Zveřejnit')
+		$form->addCheckbox('public', 'Make public')
 			->setDefaultValue(true);
 
-		$form->addSelect('gallery_id', 'Připojit galerii:')
-			->setPrompt('Žádná')
+		$form->addSelect('gallery_id', 'Attach gallery:')
+			->setPrompt('None')
 			->setItems($this->galleries->getForSelect());
 
-		$form->addTextArea('description', 'Popis', 100, 20)
+		$form->addTextArea('description', 'Description', 100, 20)
 			->setHtmlAttribute('class', 'form-wysiwyg');
 
-		$form->addSubmit('save', 'Uložit');
+		$form->addSubmit('save', 'Save');
 
 		$form->onSubmit[] = function (Form $form) {
 			$values = $form->getValues(true);
@@ -90,10 +90,10 @@ class ServicePresenter extends BasePresenter
 
 			if ($service === null) {
 				$service = $this->serviceModel->insert($values);
-				$this->flashMessage('Služba vytvořena');
+				$this->flashMessage('Service created');
 			} else {
 				$service->update($values);
-				$this->flashMessage('Služba upravena');
+				$this->flashMessage('Service edited');
 			}
 
 			$this->redirect('this', ['id' => $service->id]);
@@ -143,7 +143,7 @@ class ServicePresenter extends BasePresenter
 	{
 		unlink(WWW . '/upload/services/' . $this->service->id . '/' . $this->service->cover);
 		$this->service->update(['cover' => null]);
-		$this->flashMessage('Náhledový obrázek byl smazán');
+		$this->flashMessage('Cover image was deleted');
 		$this->redirect('this');
 	}
 
@@ -167,7 +167,7 @@ class ServicePresenter extends BasePresenter
 	protected function createComponentDropzone(): DropzoneComponent
 	{
 		$control = $this->dropzoneComponentFactory->create();
-		$control->setPrompt('Nahrajte obrázek přetažením nebo kliknutím sem.');
+		$control->setPrompt('Upload an image by dragging it or clicking here.');
 		$control->setUploadLink($this->link('uploadFiles!'));
 		$control->setRedrawLink($this->link('redrawFiles!'));
 
@@ -180,7 +180,7 @@ class ServicePresenter extends BasePresenter
 
 		if ($this->service->cover !== null) {
 			$cropper->setImagePath('upload/services/' . $this->service->id . '/' . $this->service->cover)
-				->setAspectRatio((float) 1);
+				->setAspectRatio((float) $this->configuration->img_resize);
 		}
 
 		$cropper->onCrop[] = function (): void {

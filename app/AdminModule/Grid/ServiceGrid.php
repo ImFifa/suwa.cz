@@ -35,19 +35,19 @@ class ServiceGrid extends BaseV2Grid
 		$this->setDefaultOrderBy('created', true);
 		$this->setFilterFactory([$this, 'gridFilterFactory']);
 
-		$this->addColumn('name', 'Název');
+		$this->addColumn('name', 'Name');
 
 		if ($this->presenter->configuration->getLanguagesCount() > 1) {
-			$this->addColumn('lang', 'Jazyk')->setSortable();
+			$this->addColumn('lang', 'Language')->setSortable();
 		}
 
-		$this->addColumn('gallery', 'Galerie');
-		$this->addColumn('public', 'Veřejná');
-		$this->addColumn('updated', 'Poslední úprava')->setSortable();
-		$this->addColumn('created', 'Vytvořeno')->setSortable();
+		$this->addColumn('gallery', 'Gallery');
+		$this->addColumn('public', 'Public');
+		$this->addColumn('updated', 'Last updated')->setSortable();
+		$this->addColumn('created', 'Created')->setSortable();
 
-		$this->addRowAction('edit', 'Upravit', static function (): void {});
-		$this->addRowAction('delete', 'Smazat', static function (ActiveRow $record): void {
+		$this->addRowAction('edit', 'Edit', static function (): void {});
+		$this->addRowAction('delete', 'Delete', static function (ActiveRow $record): void {
 			if ($record->cover) {
 				unlink(WWW . '/upload/services/' . $record->id . '/' . $record->cover);
 			}
@@ -55,12 +55,12 @@ class ServiceGrid extends BaseV2Grid
 			$record->delete();
 		})
 			->setProtected(false)
-			->setConfirmation('Opravdu chcete smazat tuto službu?');
+			->setConfirmation('Are you sure you want to delete this service?');
 	}
 
 	public function gridFilterFactory(Container $c): void
 	{
-		$c->addText('name', 'Název služby')->setHtmlAttribute('placeholder', 'Filtrovat dle názvu služby');
-		$c->addText('lang', 'Jazyk služby')->setHtmlAttribute('placeholder', 'Filtrovat dle jazyka služby');
+		$c->addText('name', 'Service name')->setHtmlAttribute('placeholder', 'Filter by service name');
+		$c->addText('lang', 'Service language')->setHtmlAttribute('placeholder', 'Filter by service language');
 	}
 }
