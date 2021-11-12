@@ -18,7 +18,7 @@
 		},
 		{
 			"type": "git",
-			"url": "git@github.com:K2D-CZ/analytics.git"
+			"url": "git@github.com:K2D-CZ/file.git"
 		}
 	],
 	"require": {
@@ -32,7 +32,7 @@
 		"nette/nette": "3.0.0",
 		"nextras/mail-panel": "^2.5",
 		"orisai/nette-di": "^1.0.0",
-		"simple-cms/analytics-module": "dev-master",
+		"simple-cms/file-module": "dev-master",
 		"simple-cms/box-module": "dev-master",
 		"simple-cms/core-module": "dev-master",
 		"simple-cms/gallery-module": "dev-master",
