@@ -15,10 +15,10 @@ jobs:
         uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-#
-#      - name: 🎶 Composer install
-#        if: steps.composer-cache.outputs.cache-hit != 'true'
-#        run: composer install --no-interaction --no-progress
+
+      - name: 🎶 Composer install
+        if: steps.composer-cache.outputs.cache-hit != 'true'
+        run: composer install --no-interaction --no-progress
 
       - name: 🔗 NPM install
         if: steps.npm-cache.outputs.cache-hit != 'true'
