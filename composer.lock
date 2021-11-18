@@ -2322,12 +2322,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orisai/auth.git",
-                "reference": "520c38befc7a6707d88e5a35b5fbc4df8e84190b"
+                "reference": "501bf7b37c0a9c3daaab783d78e1748f24e335d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orisai/auth/zipball/520c38befc7a6707d88e5a35b5fbc4df8e84190b",
-                "reference": "520c38befc7a6707d88e5a35b5fbc4df8e84190b",
+                "url": "https://api.github.com/repos/orisai/auth/zipball/501bf7b37c0a9c3daaab783d78e1748f24e335d0",
+                "reference": "501bf7b37c0a9c3daaab783d78e1748f24e335d0",
                 "shasum": ""
             },
             "require": {
@@ -2391,7 +2391,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-11-01T09:57:21+00:00"
+            "time": "2021-11-18T09:47:40+00:00"
         },
         {
             "name": "orisai/exceptions",
@@ -3108,7 +3108,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:K2D-CZ/core.git",
-                "reference": "08f94925c1c11f8497037ab1d7ec4c1d064384cd"
+                "reference": "d3d167285b3f1279f2f1f241055f21af3f853b32"
             },
             "require": {
                 "contributte/console": "^0.8.0|^0.9.0",
@@ -3149,7 +3149,7 @@
                 "cms",
                 "nette"
             ],
-            "time": "2021-10-12T20:24:40+00:00"
+            "time": "2021-11-17T08:49:14+00:00"
         },
         {
             "name": "simple-cms/file-module",
@@ -4483,16 +4483,16 @@
         },
         {
             "name": "orisai/coding-standard",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orisai/coding-standard-php.git",
-                "reference": "517bd638810ffa6167b8a606d3fd47206bd99671"
+                "reference": "f2e490beed0e773f9a0bd81bb503201fb1487f87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orisai/coding-standard-php/zipball/517bd638810ffa6167b8a606d3fd47206bd99671",
-                "reference": "517bd638810ffa6167b8a606d3fd47206bd99671",
+                "url": "https://api.github.com/repos/orisai/coding-standard-php/zipball/f2e490beed0e773f9a0bd81bb503201fb1487f87",
+                "reference": "f2e490beed0e773f9a0bd81bb503201fb1487f87",
                 "shasum": ""
             },
             "require": {
@@ -4521,7 +4521,7 @@
             ],
             "support": {
                 "issues": "https://github.com/orisai/coding-standard-php/issues",
-                "source": "https://github.com/orisai/coding-standard-php/tree/2.2.0"
+                "source": "https://github.com/orisai/coding-standard-php/tree/2.2.1"
             },
             "funding": [
                 {
@@ -4529,7 +4529,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-01T11:34:56+00:00"
+            "time": "2021-11-13T09:42:05+00:00"
         },
         {
             "name": "phpstan/extension-installer",
