@@ -34,9 +34,9 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
-          TARGET: /www/rainbowcars-detailing.com/
+          TARGET: /www/suwa.filipurban.cz/
 
       - name: 🗑️ Remove Cache
         uses: JesseTG/rm@v1.0.2
         with:
-          path: /rainbowcars-detailing.com/temp/cache
+          path: /www/suwa.filipurban.cz/temp/cache
