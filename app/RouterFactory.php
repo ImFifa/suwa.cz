@@ -17,15 +17,11 @@ class RouterFactory
 		$router->withModule('Admin')
 			->addRoute('admin/<presenter>/<action>[/<id>]', 'Homepage:default');
 
-		$router->withModule('Front')->addRoute('[<lang=en en|ar|cs>/]', 'Homepage:default');
-
-		$router->withModule('Front')->addRoute('[<lang=en en|ar|cs>/]contact', 'Homepage:contact');
-
-		$router->withModule('Front')->addRoute('[<lang=en en|ar|cs>/]services', 'Service:default');
-
-		$router->withModule('Front')->addRoute('[<lang=en en|ar|cs>/]service/<slug>', 'Service:detail');
-
-		$router->withModule('Front')->addRoute('[<lang=en [a-z]{2}>/]<presenter>/<action>', 'Error:404');
+		$router->withModule('Front')->addRoute('[<lang=en en|ar|cs>/]', 'Homepage:default')
+			->addRoute('[<lang=en en|ar|cs>/]contact', 'Homepage:contact')
+			->addRoute('[<lang=en en|ar|cs>/]services', 'Service:default')
+			->addRoute('[<lang=en en|ar|cs>/]service/<slug>', 'Service:detail')
+			->addRoute('[<lang=en [a-z]{2}>/]<presenter>/<action>', 'Error:404');
 
 		return $router;
 	}
