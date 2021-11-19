@@ -149,6 +149,14 @@ nav {
 
 			&:hover {
 				background-color: $bg-light;
+
+				&:first-child {
+					border-radius: $border-radius/2 $border-radius/2 0 0;
+				}
+
+				&:last-child {
+					border-radius: 0 0 $border-radius/2 $border-radius/2;
+				}
 			}
 		}
 	}
@@ -276,8 +284,8 @@ section {
 .service-detail {
 
 	.service-grid {
-	display: grid;
-	grid-template-columns: 1fr;
+		display: grid;
+		grid-template-columns: 1fr;
 
 		.cover-img {
 			grid-column: 1;
