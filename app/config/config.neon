@@ -2,6 +2,9 @@ php:
 	date.timezone: Europe/Prague
 	output_buffering: 4096
 
+session:
+	autoStart: true
+
 application:
 	errorPresenter: Front:Error
 	mapping:
@@ -9,7 +12,6 @@ application:
 
 services:
 	router: App\RouterFactory::createRouter()
-	repository: App\Service\ProjectModelRepository
 	# Grids
 	- App\AdminModule\Grid\ServiceGridFactory
 	# Models
