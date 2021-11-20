@@ -7,19 +7,30 @@ link_services: Services
 link_contact: Contact
 
 #services page
+show_services: Show services
 title_services: Our services
 no_services: There is no service to show at the moment
 no_service: "The service you are looking for wasn't found in English. It might exist in different language version."
 show_service: Show detail
 gallery: Gallery
+interested_heading: Do you like our offer?
+interested_text:  "Don't hesitate to contact us!"
+
 
 #contact page
+contact_us: Contact us!
 title_contact: Contact
 languages: "English, Arabic, French and Czech"
 title_email: Send me an email!
 email_send: Send email
 send: Send
 close: Close
+
+#email
+email_name: Name and surname
+email_phone: Phone number
+email_email: Email address
+email_text: Your message
 
 #about page
 title_about: About us

@@ -1,16 +1,4 @@
 @include media-breakpoint-up(sm) {
-
-	// header
-	header {
-		height: 250px;
-		background: url("../../img/svg/header.svg") no-repeat;
-	}
-
-	nav {
-		margin-bottom: 100px;
-	}
-
-
 	// scroll top
 	#scrollTopBtn {
 		margin: unset;
@@ -35,6 +23,10 @@
 }
 
 @include media-breakpoint-up(sml) {
+	.main-svg {
+		display: block;
+	}
+
 	.service-gallery {
 		.gallery-grid {
 			grid-template-columns: 1fr 1fr 1fr;
@@ -45,6 +37,26 @@
 
 
 @include media-breakpoint-up(md) {
+
+	header {
+
+		h1 {
+			font-size: 2.3rem;
+		}
+	}
+
+	.about-section {
+		grid-template-columns: 1fr 1fr;
+
+		.about-text {
+			text-align: left;
+		}
+
+		img {
+			max-height: unset;
+		}
+	}
+
 	.service-section {
 		.service-grid {
 			grid-template-columns: 1fr 1fr;
@@ -56,13 +68,51 @@
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
 	}
+
+	.service-detail {
+
+		.cover-img {
+			max-width: 550px;
+			mask: url("../../img/svg/mask1.svg") no-repeat;
+			mask-size: contain;
+			border-radius: $border-radius;
+		}
+	}
+
+	section {
+		padding: 120px 0;
+	}
 }
 @include media-breakpoint-up(lg) {
+
+
+	.nav-link {
+		padding: 0.5rem 1rem;
+	}
 
 	h1 { font-size: 3rem }
 	h2 { font-size: 2.1rem }
 	h3 { font-size: 1.8rem }
 	h4 { font-size: 1.5rem }
+
+	header {
+		h1 {
+			font-size: 1.8rem;
+		}
+
+		.container {
+			flex-direction: row;
+		}
+
+		.header-text {
+			text-align: left;
+			order: 1;
+		}
+
+		img {
+			max-width: 50%;
+		}
+	}
 
 	.navbar-brand {
 		img {
@@ -74,6 +124,12 @@
 			img {
 				transform: scale(1.05);
 			}
+		}
+	}
+
+	nav {
+		.navigation-toggler {
+			display: none;
 		}
 	}
 
@@ -113,7 +169,6 @@
 	}
 
 	section {
-		padding: 90px 0;
 		margin: 0 auto;
 		max-width: 1440px;
 	}
@@ -155,11 +210,18 @@
 		border-radius: unset;
 		background: url("../../img/svg/cta.svg") no-repeat;
 		background-size: contain;
-		padding: 3rem;
+		background-position: center;
+		padding: 4rem;
 	}
 }
 
 @include media-breakpoint-up(xl) {
+
+	header {
+		h1 {
+			font-size: 2.1rem;
+		}
+	}
 
 	.service-gallery {
 		.gallery-grid {
@@ -169,6 +231,12 @@
 }
 
 @include media-breakpoint-up(xxl) {
+
+	header {
+		h1 {
+			font-size: 2.3rem;
+		}
+	}
 
 	.service-gallery {
 		.gallery-grid {
