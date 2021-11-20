@@ -4,6 +4,13 @@
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Color system
+/* SCSS HEX */
+$ultra-red: #ef798aff;
+$cosmic-latte: #fdfff8;
+$pewter-blue: #7ea8beff;
+$medium-sea-green: #43ab6c;
+$bittersweet: #f57a71;
+
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -64,7 +71,8 @@ $colors: map-merge(
 		$colors
 );
 
-$primary:       #1D1282 !default;
+$violet:		#6f43b3 !default;
+$primary:       $gray-800 !default;
 $secondary:     #3123AE !default;
 $success:       $green !default;
 $info:          $cyan !default;

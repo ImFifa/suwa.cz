@@ -63,68 +63,165 @@ body {
 	line-height: 1.5;
 	font-size: 17px;
 	color: #222;
-	background-color: $bg-footer;
+	background-color: $cosmic-latte;
 	font-family: 'Roboto', sans-serif;
 }
 
 // page
 .page {
-	padding-bottom: 250px;
-	min-height: 100vh;
+	min-height: 90vh;
 	position: relative;
+}
+
+// bar
+.bar {
+	width: 100vw;
+	height: 25px;
+	background-color: $bittersweet;
 }
 
 // header
 header {
-	z-index: 1;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 170px;
-	background: url("../../img/svg/mobile_header.svg") no-repeat;
-	background-size: cover;
-	background-position: top left;
+	position: relative;
+	min-height: 250px;
+	padding-top: 40px;
+	background: linear-gradient(to right, #6f43b3 30%, #ef798aff);
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header-text {
+		order: 2;
+		text-align: center;
+	}
+
+	h1 {
+		color: $cosmic-latte;
+		max-width: 700px;
+		font-size: 2rem;
+		line-height: 130%;
+	}
+
+	img {
+		order: 1;
+		width: 100%;
+		height: 100%;
+		mask: url("../../img/svg/mask3.svg") no-repeat;
+		mask-size: contain;
+		mask-position: center;
+	}
 }
 
+.main-svg {
+	display: none;
+	object-fit: cover;
+	fill: url(#MyGradient);
+	width: 100vw;
+}
 // navbar
 nav {
 	z-index: 2;
+	background-color: $cosmic-latte;
+
+	.navigation-toggler {
+		display: flex;
+		flex-direction: column;
+		width: 50px;
+		cursor: pointer;
+
+		span{
+			background: $primary;
+			border-radius: calc(0.1px * 66.66);
+			height: calc(0.07px * 66.66);
+			margin: calc(0.07px * 66.66) 0;
+			transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+		}
+
+		span:nth-of-type(1){
+			width:50%;
+		}
+
+		span:nth-of-type(2){
+			width:100%;
+		}
+
+		span:nth-of-type(3){
+			width:75%;
+
+		}
+
+		input[type="checkbox"]{
+			display:none;
+		}
+
+		input[type="checkbox"]:checked ~ span:nth-of-type(1){
+			transform-origin:bottom;
+			transform:rotatez(45deg) translate(calc(0.08px * 66.66),0px)
+		}
+
+		input[type="checkbox"]:checked ~ span:nth-of-type(2){
+			transform-origin:top;
+			transform:rotatez(-45deg)
+		}
+
+		input[type="checkbox"]:checked ~ span:nth-of-type(3){
+			transform-origin:bottom;
+			width:50%;
+			transform: translate(calc(0.3px * 66.66),calc(-0.11px * 66.66)) rotatez(45deg);
+		}
+	}
 }
-.navbar-toggler-icon {
-	width: 2rem;
-	height: 2rem;
-}
+
 .navbar-collapse {
 	text-align: center;
-	background-color: $bg-light-100;
 	border-radius: $border-radius;
 	padding: 1rem;
 }
 
 .navbar-brand {
-	img {
-		max-width: 90px;
+	svg {
+		width: 150px;
+		height: auto;
 	}
+}
+
+.nav-link {
+	padding: 1.4rem 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
-	color: $secondary;
-}
-.nav-link {
 	transition: all .2s ease-in-out;
-	color: $primary;
+	color: $bittersweet;
 	font-family: 'Comfortaa', cursive;
-	font-size: 1.1rem;
-	padding: 1rem;
+	font-size: 1.15rem;
 
 	&:hover {
-		color: darken($primary, 5%);
+		color: darken($bittersweet, 5%);
 	}
 }
 
+.instagram, .linkedin, .facebook {
+	svg {
+		height: 30px;
+		width: auto;
+		fill: $bittersweet;
+		transition: all .2s ease-in-out;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+}
 .language-dropdown {
+	transition: all .2s ease-in-out;
+	color: $gray-800;
 	border-radius: $border-radius/2;
-	background-color: lighten($bg-light-100, 3%);
+	font-family: 'Comfortaa', cursive;
 
 	img {
 		margin-right: .3rem;
@@ -135,9 +232,13 @@ nav {
 		font-size: 1rem;
 	}
 
+	&:hover {
+		background-color: lighten($bittersweet, 25%);
+	}
+
 	.dropdown-menu {
 		border-radius: $border-radius/2;
-		background-color: $bg-lightest;
+		background-color: lighten($bittersweet, 25%);
 		border: none;
 		padding: 0;
 		width: 100%;
@@ -146,9 +247,10 @@ nav {
 		.dropdown-item {
 			text-align: center;
 			padding: 1.2rem;
+			transition: all .2s ease-in-out;
 
 			&:hover {
-				background-color: $bg-light;
+				background-color: lighten($bittersweet, 15%);
 
 				&:first-child {
 					border-radius: $border-radius/2 $border-radius/2 0 0;
@@ -163,7 +265,7 @@ nav {
 }
 
 h1, h2, h3 {
-	color: $secondary;
+	color: $gray-900;
 	font-family: 'Comfortaa', cursive;
 }
 
@@ -188,7 +290,7 @@ a {
 }
 
 section {
-	padding: 60px 0;
+	padding: 120px 0;
 }
 
 // heading
@@ -291,10 +393,6 @@ section {
 			grid-column: 1;
 			grid-row: 1;
 			width: 100%;
-			max-width: 550px;
-			mask: url("../../img/svg/mask1.svg") no-repeat;
-			mask-size: contain;
-			border-radius: $border-radius;
 			margin-bottom: 2rem;
 		}
 
@@ -303,6 +401,10 @@ section {
 				max-width: 900px;
 				font-size: 1.1rem;
 				line-height: 1.6;
+
+				ul {
+					padding-left: 1.5rem;
+				}
 			}
 		}
 	}
@@ -339,17 +441,34 @@ section {
 	max-width: 450px;
 	width: 100%;
 	margin-top: 4rem;
-	background-color: $bg-lighter;
+	color: $white;
+	background-color: $violet;
 	border-radius: $border-radius;
+	font-family: 'Comfortaa', cursive;
 	padding: 1.5rem;
 }
 
 // about
 .about-section {
-	text-align: center;
-	font-size: 1.1rem;
-	line-height: 1.6;
-	max-width: 800px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 4rem;
+	align-items: center;
+
+	img {
+		width: 100%;
+		max-width: 700px;
+		max-height: 600px;
+		height: auto;
+	}
+
+	.about-text {
+		text-align: center;
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+
+
 }
 
 // contact page
@@ -364,7 +483,7 @@ section {
 		display: block;
 		width: auto;
 		border-radius: $border-radius;
-		background-color: $bg-lighter;
+		background-color: rgba($violet, 0.2);
 		justify-self: flex-start;
 		text-align: center;
 		padding: 2rem;
@@ -406,25 +525,27 @@ section {
 		width: 100%;
 		padding: .7rem 1rem;
 		border-radius: $border-radius / 2;
-		background-color: $light-blue;
+		background-color: rgba($violet, 0.1);
 		border: none;
 		color: $primary;
 
 		&:hover {
-			background-color: darken($light-blue, 2%);
+			background-color: rgba($violet, 0.2);
 		}
 	}
 
 	.submit {
 		transition: background-color .25s ease-in-out;
-		background-color: $secondary;
+		background-color: $medium-sea-green;
 		max-width: 100%;
 		min-width: 250px;
 		font-size: 1.2rem;
 		padding: .65rem 1.5rem;
+		border: none;
+		font-family: 'Comfortaa', cursive;
 
 		&:hover {
-			background-color: darken($primary, 7%);
+			background-color: darken($medium-sea-green, 7%);
 		}
 
 		i {
@@ -435,38 +556,38 @@ section {
 
 // footer
 .page-footer {
+	margin-top: 100px;
 	display: block;
-	position: absolute;
 	width: 100vw;
 	height: auto;
-	bottom: 0;
-	right: 0;
-	margin-top: 100px;
-	z-index: -1;
 
-	svg {
+	.footer-svg {
+		fill: $ultra-red;
 		width: 100vw;
-		height: auto;
 	}
 
 	.created {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		background-color: $bg-footer;
-		padding-bottom: 3rem;
-		color: rgba($primary, .5);
+		color: rgba($cosmic-latte, .8);
+		padding-bottom: 80px;
+		background-color: $ultra-red;
+		font-family: 'Comfortaa', cursive;
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
 
 		a {
 			&:hover svg {
-				fill: rgba($primary, 1);
+				fill: rgba($cosmic-latte, 1);
 				transform: scale(1.1);
 			}
 
 			svg {
 				transition: all .2s ease-in-out;
-				fill: rgba($primary, .6);
+				fill: rgba($cosmic-latte, .9);
 				display: block;
 				margin-bottom: .7rem;
 				width: 130px;
@@ -530,3 +651,46 @@ section {
 //		font-size: 1.5rem;
 //	}
 //}
+
+.pulse-btn {
+	box-shadow: 0 0 0 0 rgba($black, 0.05);
+	font-family: 'Comfortaa', cursive;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.25s ease-in-out;
+	-webkit-animation: pulse 2s infinite;
+	background-color: $medium-sea-green;
+	color: $white;
+
+	&:after {
+		position: relative;
+		content: "";
+		display: inline-block;
+		background: url("../../img/svg/arrow_right.svg") no-repeat;
+		background-size: contain;
+		width: 50px;
+		height: 22px;
+		margin-left: 1rem;
+	}
+
+	&:hover {
+		color: $white;
+		-webkit-animation: none;
+	}
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		transform: scale(.97);
+	}
+	70% {
+		transform: scale(1);
+
+		box-shadow: 0 0 0 30px rgba($black, 0);
+	}
+	100% {
+		transform: scale(.97);
+		box-shadow: 0 0 0 0 rgba($black, 0);
+	}
+}
