@@ -38,6 +38,8 @@
 
 @include media-breakpoint-up(md) {
 
+
+
 	header {
 
 		h1 {
@@ -82,6 +84,12 @@
 	section {
 		padding: 120px 0;
 	}
+
+	.page-footer {
+		.footer-svg {
+			display: block;
+		}
+	}
 }
 @include media-breakpoint-up(lg) {
 
@@ -96,6 +104,8 @@
 	h4 { font-size: 1.5rem }
 
 	header {
+		padding-bottom: 20px;
+		
 		h1 {
 			font-size: 1.8rem;
 		}
