@@ -7,17 +7,17 @@ link_services: الخدمات
 link_contact: الاتصال
 
 #services page
-show_services: Show services
+show_services: عرض الخدمات
 title_services: خدماتنا
 no_services: لا توجد خدمة لإظهارها في الوقت الحالي
 no_service: لم يتم العثور على الخدمة التي تبحث عنها باللغة الإنجليزية. قد توجد ولكن في إصدار لغة مختلفة
 show_service: إظهار التفاصيل
 gallery: معرض الصور
-interested_heading: Do you like our offer?
-interested_text:  "Don't hesitate to contact us!"
+interested_heading: هل يعجبك عرضنا؟
+interested_text:  لا تتردد في الاتصال بنا!
 
 #contact page
-contact_us: Contact us!
+contact_us: الاتصال بنا
 title_contact: الاتصال
 languages: "أنا أتكلم الإنجليزية والعربية والفرنسية والتشيكية"
 title_email: أرسل لي رسالة بريد إلكتروني!
@@ -26,10 +26,10 @@ send: إرسال
 close: إغلاق
 
 #email
-email_name: Name and surname
-email_phone: Phone number
-email_email: Email address
-email_text: Your message
+email_name: الاسم واللقب
+email_phone: رقم الهاتف
+email_email: عنوان البريد الإلكتروني
+email_text: رسالتك
 
 #about page
 title_about: عنا

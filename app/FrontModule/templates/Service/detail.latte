@@ -12,7 +12,7 @@
 		{ifset $service}
 			<div class="service-grid">
 				<div class="service-content">
-					<h1>{$service->name}</h1>
+					<h1 n:block="title">{$service->name}</h1>
 					<div class="service-description">
 						{$service->description|noescape}
 					</div>
