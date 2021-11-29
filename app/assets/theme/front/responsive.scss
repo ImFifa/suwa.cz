@@ -86,8 +86,12 @@
 	}
 
 	.page-footer {
-		.footer-svg {
+		.footer-svg, .footer-svg2 {
 			display: block;
+		}
+
+		.created {
+			padding-top: 0;
 		}
 	}
 }
@@ -184,6 +188,20 @@
 		max-width: 1440px;
 	}
 
+	.service-section {
+		.service-grid {
+
+			img {
+				max-height: 400px;
+				object-fit: cover;
+				object-position: center;
+			}
+
+			h4 {
+				font-size: 1.8rem;
+			}
+		}
+	}
 	.service-detail {
 		.service-grid {
 			grid-template-columns: 1fr 500px;
@@ -243,6 +261,15 @@
 		}
 	}
 
+	.service-section {
+		.service-grid {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+
+			h4 {
+				font-size: 1.6rem;
+			}
+		}
+	}
 	.service-gallery {
 		.gallery-grid {
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
