@@ -73,13 +73,6 @@ body {
 	position: relative;
 }
 
-// bar
-.bar {
-	width: 100vw;
-	height: 25px;
-	background-color: $bittersweet;
-}
-
 // header
 header {
 	position: relative;
@@ -134,9 +127,10 @@ nav {
 		flex-direction: column;
 		width: 50px;
 		cursor: pointer;
+		margin: 0;
 
 		span{
-			background: $primary;
+			background: $purple;
 			border-radius: calc(0.1px * 66.66);
 			height: calc(0.07px * 66.66);
 			margin: calc(0.07px * 66.66) 0;
@@ -186,13 +180,13 @@ nav {
 
 .navbar-brand {
 	svg {
-		width: 150px;
+		width: 110px;
 		height: auto;
 	}
 }
 
 .nav-link {
-	padding: 1.4rem 0;
+	padding: 0.8rem 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -484,7 +478,7 @@ section {
 		display: block;
 		width: auto;
 		border-radius: $border-radius;
-		background-color: rgba($violet, 0.2);
+		background-color: rgba(#aee3ff, .9);
 		justify-self: flex-start;
 		text-align: center;
 		padding: 2rem;
@@ -526,12 +520,12 @@ section {
 		width: 100%;
 		padding: .7rem 1rem;
 		border-radius: $border-radius / 2;
-		background-color: rgba($violet, 0.1);
+		background-color: rgba(#aee3ff, 0.4);
 		border: none;
 		color: $primary;
 
 		&:hover {
-			background-color: rgba($violet, 0.2);
+			background-color: rgba(#aee3ff, 0.6);
 		}
 	}
 
@@ -568,11 +562,21 @@ section {
 		width: 100vw;
 	}
 
+	.footer-svg2 {
+		display: none;
+		fill: #6f43b3;
+		width: 100vw;
+	}
+
+	.inner-footer {
+		background-color: $ultra-red;
+	}
+
 	.created {
 		padding-top: 40px;
 		color: rgba($cosmic-latte, .8);
 		padding-bottom: 80px;
-		background-color: $ultra-red;
+		background: linear-gradient(to bottom, #6f43b3 10%, #2a638d);;
 		font-family: 'Comfortaa', cursive;
 
 		.container {
