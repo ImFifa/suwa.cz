@@ -105,7 +105,7 @@
 
 	header {
 		padding-bottom: 20px;
-		
+
 		h1 {
 			font-size: 1.8rem;
 		}
@@ -118,6 +118,7 @@
 			text-align: left;
 			order: 1;
 		}
+
 
 		img {
 			max-width: 50%;
@@ -181,12 +182,6 @@
 	section {
 		margin: 0 auto;
 		max-width: 1440px;
-	}
-
-	.service-section {
-		.service-grid {
-			grid-template-columns: 1fr 1fr 1fr;
-		}
 	}
 
 	.service-detail {
