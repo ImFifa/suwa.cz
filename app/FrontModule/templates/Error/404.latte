@@ -1,4 +1,13 @@
 {block content}
+	<svg class="main-svg" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1440 75.7876V4.95584e-05L0 0V59.871C45.0001 55.7419 204.5 41.2927 338.5 59.871C472.5 78.4492 592.5 59.871 760 59.871C868 59.871 916.5 67.2643 1003.1 74.4021C1130.42 84.8967 1333.12 77.7888 1440 75.7876Z"/>
+		<defs>
+			<linearGradient id="MyGradient">
+				<stop offset="30%" stop-color="#6f43b3" />
+				<stop offset="100%" stop-color="#2a638d" />
+			</linearGradient>
+		</defs>
+	</svg>
 	<section class="d-flex align-items-center justify-content-center">
 		<div class="container">
 			<div class="row">
@@ -8,11 +17,9 @@
 				</div>
 				<div class="col-xl-6">
 					<p class="mt-5">
-						Z důvodu nových webových stránek nemusí být některý z odkazů, který jste použili pro návštěvu, aktivní.<br /><br />
-						Doporučujeme vám vrátit se zpět na úvod a nový web si prohlédnout.<br />
-						Věříme, že se Vám bude líbit.
+						{_ error_p}
 					</p>
-					<a n:href=":Front:Homepage:" class="btn btn-primary my-5">Zpět na úvod</a>
+					<a n:href=":Front:Homepage:" class="btn btn-primary my-5">{_ back}</a>
 				</div>
 			</div>
 		</div>
