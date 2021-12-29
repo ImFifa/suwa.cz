@@ -5,6 +5,7 @@ subheading: Poskytujeme širokou nabídku služeb od podnikatelského poradenstv
 link_home: Úvod
 link_services: Služby
 link_contact: Konktakt
+link_pricing: Ceník
 
 #services page
 show_services: Zobrazit služby
@@ -25,6 +26,9 @@ title_email: Napiště mi zprávu!
 email_send: Odeslat email
 send: Odeslat
 close: Zavřít
+
+#pricing page
+title_pricing: Ceník
 
 #email
 email_name: Jméno a příjmení
