@@ -5,6 +5,7 @@ subheading: We offer wide range of services from business consulting and digital
 link_home: Home
 link_services: Services
 link_contact: Contact
+link_pricing: Pricing
 
 #services page
 show_services: Show services
@@ -25,6 +26,9 @@ title_email: Send me an email!
 email_send: Send email
 send: Send
 close: Close
+
+#pricing page
+title_pricing: Pricing
 
 #email
 email_name: Name and surname

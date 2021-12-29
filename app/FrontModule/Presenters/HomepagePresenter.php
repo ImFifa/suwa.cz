@@ -36,6 +36,11 @@ class HomepagePresenter extends BasePresenter
 
 	}
 
+	public function renderPricing(): void
+	{
+
+	}
+
 	protected function createComponentContactForm(): Form
 	{
 		$form = new Form();
