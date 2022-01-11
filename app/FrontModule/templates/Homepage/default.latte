@@ -3,7 +3,11 @@
 	<header class="main-header">
 		<div class="container">
 			<div class="header-text">
-				<h1>{_ subheading}</h1>
+				<h1>
+					<small>{_ subheading_pre}</small>
+					{_ subheading}
+					<small><i class="fas fa-globe"></i> {_ subheading_post}</small>
+				</h1>
 				<a n:href="Service:default" class="btn pulse-btn btn-lg mt-3">{_ show_services}</a>
 			</div>
 
@@ -24,8 +28,15 @@
 		<img src="{$basePath}/dist/img/about2.png" alt="Profile image">
 		<div class="about-text">
 			<h2>{_ title_about}</h2>
+			<div class="content">
 			{box about}
+			</div>
 			<a n:href="Homepage:contact" class="btn pulse-btn btn-lg mt-3">{_ contact_us}</a>
 		</div>
 	</section>
 {/block}
+
+
+Poskytujeme poradenství a služby po celém světě v oblasti obchodu, investic, realit, online franšíz a relokací (Česká republika).
+
+Spolupracujeme s těmi nejlepšími odborníky v těchto oborech.
