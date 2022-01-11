@@ -1,5 +1,7 @@
 # heading
-subheading: Poskytujeme širokou nabídku služeb od podnikatelského poradenství před digitální marketing až po pořádání eventů
+subheading_pre: Konzultace a služby v oblasti
+subheading: "Podnikání. Investic. Nemovitostí. Online frančíz. Relokace"
+subheading_post: Globálně
 
 # menu
 link_home: Úvod
@@ -15,7 +17,7 @@ show_service: Zobrazit detail
 gallery: Galerie
 
 interested_heading: Zaujala Vás naše nabídka?
-interested_text:  Neváhejte a ozvěte se nám!
+interested_text:  Neváhejte a ozvěte se nám pro více informací!
 
 #contact page
 contact_us: Ozvěte se nám!

@@ -1,5 +1,7 @@
 # heading
-subheading: We offer wide range of services from business consulting and digital marketing all the way to organizing events
+subheading_pre: Consulting and services in
+subheading: "Business. Investments. Real Estate. Online Franchise. Relocation"
+subheading_post: Globally
 
 # menu
 link_home: Home
@@ -14,7 +16,7 @@ no_service: "The service you are looking for wasn't found in English. It might e
 show_service: Show detail
 gallery: Gallery
 interested_heading: Do you like our offer?
-interested_text:  "Don't hesitate to contact us!"
+interested_text:  "Don't hesitate to contact us for more informations!"
 
 
 #contact page
