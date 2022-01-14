@@ -610,6 +610,24 @@ section {
 	}
 }
 
+// webinarModal
+.webinar-bar {
+	width: 100vw;
+	height: 120px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: lighten($bittersweet, 10%);
+
+}
+#webinarModal {
+	.modal-dialog {
+		width: 700px;
+		max-width: 100%;
+	}
+}
+
 
 // scroll top
 #scrollTopBtn {

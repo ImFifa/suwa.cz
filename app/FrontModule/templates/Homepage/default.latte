@@ -1,5 +1,9 @@
 {block #content}
-
+	<div class="webinar-bar">
+		<div class="container">
+			<button class="btn-secondary btn-lg" data-toggle="modal" data-target="#webinarModal">{_ show_webinar_form}</button>
+		</div>
+	</div>
 	<header class="main-header">
 		<div class="container">
 			<div class="header-text">
@@ -34,9 +38,31 @@
 			<a n:href="Homepage:contact" class="btn pulse-btn btn-lg mt-3">{_ contact_us}</a>
 		</div>
 	</section>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="webinarModal" tabindex="-1" role="dialog" aria-labelledby="webinarModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="webinarModalLabel">Webinar Title</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="webinar-description">
+						<p>This is text about webinar...</p>
+						<br><br>
+						<h4>Sign up webinar form...</h4>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
 {/block}
 
-
-Poskytujeme poradenství a služby po celém světě v oblasti obchodu, investic, realit, online franšíz a relokací (Česká republika).
-
-Spolupracujeme s těmi nejlepšími odborníky v těchto oborech.

@@ -14,14 +14,18 @@ services:
 	router: App\RouterFactory::createRouter()
 	# Grids
 	- App\AdminModule\Grid\ServiceGridFactory
+	- App\AdminModule\Grid\WebinarGridFactory
 	# Models
 	- App\Model\ServiceModel
+	- App\Model\WebinarModel
+	- App\Model\ParticipantModel
 
 parameters:
 	customTemplatesDir: %appDir%/FrontModule/templates/
 	admin:
 		menu:
 			Services: [':Admin:Service:', offer]
+			Webinar Registration: [':Admin:Webinar:', clipboard-text]
 
 extensions:
     recaptcha: Contributte\ReCaptcha\DI\ReCaptchaExtension
