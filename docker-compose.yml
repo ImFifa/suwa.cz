@@ -2,8 +2,7 @@ version: '3'
 
 networks:
   nginx_proxy_network:
-    external:
-      name: nginx_proxy_network
+    external: true
 
 services:
   db:
@@ -28,7 +27,7 @@ services:
       VIRTUAL_HOST: dbsuwa.localhost
 
   php:
-    image: php8apache2110
+    image: php74apache
     networks:
       - nginx_proxy_network
     expose:
