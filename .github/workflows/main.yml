@@ -20,12 +20,20 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --no-interaction --no-progress
 
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
       - name: 🔗 NPM install
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm install --no-optional
 
       - name: 🔨 Build project
         run: npm run build
+
+      - name: 🗑️ Remove Node Modules
+        run: rm -rf node_modules
 
       - name: 📂 Deploy to server
         uses: easingthemes/ssh-deploy@v2.1.5
@@ -34,9 +42,9 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
-          TARGET: /www/suwa.filipurban.cz/
+          TARGET: /www/suwa.cz/
 
       - name: 🗑️ Remove Cache
         uses: JesseTG/rm@v1.0.2
         with:
-          path: /www/suwa.filipurban.cz/temp/cache
+          path: /www/suwa.cz/temp/cache
